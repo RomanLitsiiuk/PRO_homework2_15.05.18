@@ -37,4 +37,4 @@ function guessRandomNumber() {
   }
 }
 
-guessRandomNumber();
+//guessRandomNumber();
