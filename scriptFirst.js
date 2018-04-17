@@ -4,7 +4,7 @@ function guessRandomNumber() {
   var guess = +prompt('Попробуйте угадать число в диапазоне от 0 до 10', '');
 
   if (isNaN(guess)) {
-  	alert('Введите число, а не буквы разные!');
+  	alert('Fatal error! 404! Введите число, а не буквы разные!');
   	return guessRandomNumber();
   }
 
@@ -27,9 +27,14 @@ function guessRandomNumber() {
   	}
 
   } else {
-    	alert('Вы ввели цифру, которая не входит в диапазон от 0 до 10. Попробуйте повторить.');
+    	alert('Вы ввели число, которое не входит в диапазон от 0 до 10. Попробуйте повторить.');
     	return guessRandomNumber();
+  }
+
+  var again = confirm('Желаете повторить игру?');
+  if (again == true) {
+    return guessRandomNumber();
   }
 }
 
-guessRandomNumber()
+guessRandomNumber();
